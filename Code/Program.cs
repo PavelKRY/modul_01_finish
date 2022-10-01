@@ -43,27 +43,28 @@ void PrintResultMetodOne()
 
 
 PrintResultMetodOne();
-if (arrayFinalyLenght==0)
+if (arrayFinalyLenght == 0)
 {
     string[] arrayFinaly = new string[1];
     Console.WriteLine("Длинна полученного массива один символ");
     Console.WriteLine("Массив пуст");
 }
-else{
-string[] arrayFinaly = new string[arrayFinalyLenght];
-for (int i = 0; i < array.Length; i++)
+else
 {
-    char[] tmp = array[i].ToCharArray();
-    int temprary;
-    temprary = tmp.Length;
-    if (temprary <= 3)
+    string[] arrayFinaly = new string[arrayFinalyLenght];
+    for (int i = 0; i < array.Length; i++)
     {
-        arrayFinaly[j] = array[i];
-        Console.WriteLine("Значение из нового массива под индексом ("
-        + j + ") = " + arrayFinaly[j]);
-        j++;
+        char[] tmp = array[i].ToCharArray();
+        int temprary;
+        temprary = tmp.Length;
+        if (temprary <= 3)
+        {
+            arrayFinaly[j] = array[i];
+            Console.WriteLine("Значение из нового массива под индексом ("
+            + j + ") = " + arrayFinaly[j]);
+            j++;
+        }
     }
-}
-Console.WriteLine(string.Empty);
-Console.WriteLine("Длинна полученного массива = " + j);
+    Console.WriteLine(string.Empty);
+    Console.WriteLine("Длинна полученного массива = " + j);
 }
