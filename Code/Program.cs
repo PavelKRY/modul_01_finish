@@ -20,7 +20,7 @@ int FillArrayAndSearchLenghtFinalyArray(string[] array)
         char[] tmp = array[i].ToCharArray();
         int temprary;
         temprary = tmp.Length;
-        Console.WriteLine("Количество символов в строке = " + temprary);
+        Console.WriteLine("Количество символов в значении под индексом " + i + " = " + temprary);
         if (temprary <= 3)
         {
             arrayFinalyLenght++;
@@ -34,13 +34,12 @@ FillArrayAndSearchLenghtFinalyArray(array);
 void PrintResultMetodOne()
 {
     Console.WriteLine(string.Empty);
-    Console.WriteLine("Количество строк, где количество символов меньше или равно трём = " + arrayFinalyLenght);
+    Console.WriteLine("Количество значений, где количество символов меньше или равно трём = " + arrayFinalyLenght);
     Console.WriteLine(string.Empty);
 }
 // PrintResultMetodOne(); метод был необходим, пока программа не была закончена,
 // сейчас от метода можно избавится, прописав просто строками
 // ,но закоментил и оставил как есть, для наглядности.
-
 
 PrintResultMetodOne();
 if (arrayFinalyLenght == 0)
