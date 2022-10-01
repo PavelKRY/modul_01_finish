@@ -28,20 +28,40 @@ int FillArrayAndSearchLenghtFinalyArray(string[] array)
     }
     return arrayFinalyLenght;
 }
+
 FillArrayAndSearchLenghtFinalyArray(array);
+
 void PrintResultMetodOne()
 {
-Console.WriteLine(string.Empty);
-Console.WriteLine("Количество строк, где количество символов меньше или равно трём = " + arrayFinalyLenght);
-Console.WriteLine(string.Empty);
+    Console.WriteLine(string.Empty);
+    Console.WriteLine("Количество строк, где количество символов меньше или равно трём = " + arrayFinalyLenght);
+    Console.WriteLine(string.Empty);
 }
-PrintResultMetodOne();
+// PrintResultMetodOne(); метод был необходим, пока программа не была закончена,
+// сейчас от метода можно избавится, прописав просто строками
+// ,но закоментил и оставил как есть, для наглядности.
+
 while (arrayFinalyLenght == 0)
 {
     Console.WriteLine("Нужно ввести значения, хотя бы одно из которых состоит из трёх символов, в противном случае программа перезапустится");
     FillArrayAndSearchLenghtFinalyArray(array);
 };
+
 PrintResultMetodOne();
 
-
-
+string[] arrayFinaly = new string[arrayFinalyLenght];
+for (int i = 0; i < array.Length; i++)
+{
+    char[] tmp = array[i].ToCharArray();
+    int temprary;
+    temprary = tmp.Length;
+    if (temprary <= 3)
+    {
+        arrayFinaly[j] = array[i];
+        Console.WriteLine("Значение из нового массива под индексом ("
+        + j + ") = " + arrayFinaly[j]);
+        j++;
+    }
+}
+Console.WriteLine(string.Empty);
+Console.WriteLine("Длинна полученного массива = " + j);
