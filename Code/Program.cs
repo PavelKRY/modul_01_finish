@@ -29,15 +29,19 @@ int FillArrayAndSearchLenghtFinalyArray(string[] array)
     return arrayFinalyLenght;
 }
 FillArrayAndSearchLenghtFinalyArray(array);
+void PrintResultMetodOne()
+{
 Console.WriteLine(string.Empty);
 Console.WriteLine("Количество строк, где количество символов меньше или равно трём = " + arrayFinalyLenght);
 Console.WriteLine(string.Empty);
+}
+PrintResultMetodOne();
 while (arrayFinalyLenght == 0)
 {
     Console.WriteLine("Нужно ввести значения, хотя бы одно из которых состоит из трёх символов, в противном случае программа перезапустится");
     FillArrayAndSearchLenghtFinalyArray(array);
 };
-Console.WriteLine(string.Empty);
-Console.WriteLine("Количество строк, где количество символов меньше или равно трём = " + arrayFinalyLenght);
-Console.WriteLine(string.Empty);
+PrintResultMetodOne();
+
+
 
