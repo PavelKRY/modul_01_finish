@@ -41,14 +41,15 @@ void PrintResultMetodOne()
 // сейчас от метода можно избавится, прописав просто строками
 // ,но закоментил и оставил как есть, для наглядности.
 
-while (arrayFinalyLenght == 0)
-{
-    Console.WriteLine("Нужно ввести значения, хотя бы одно из которых состоит из трёх символов, в противном случае программа перезапустится");
-    FillArrayAndSearchLenghtFinalyArray(array);
-};
 
 PrintResultMetodOne();
-
+if (arrayFinalyLenght==0)
+{
+    string[] arrayFinaly = new string[1];
+    Console.WriteLine("Длинна полученного массива один символ");
+    Console.WriteLine("Массив пуст");
+}
+else{
 string[] arrayFinaly = new string[arrayFinalyLenght];
 for (int i = 0; i < array.Length; i++)
 {
@@ -65,3 +66,4 @@ for (int i = 0; i < array.Length; i++)
 }
 Console.WriteLine(string.Empty);
 Console.WriteLine("Длинна полученного массива = " + j);
+}
